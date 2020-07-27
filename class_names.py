@@ -9,6 +9,7 @@ Created on Sun Jul 19 05:30:02 2020
 #this code uses the College Factual website (https://www.collegefactual.com/) as its source of data
 #data is currently for 2017-2018
 #this code only has to be run once (possibly in segments to prevent crashing); once the data has been recorded this will not change for at least one year
+#This code was written in Python 2, and does not use bytes; conversion from bytes to strings will be required to run on Python 3
 
 import requests
 from bs4 import BeautifulSoup
@@ -148,20 +149,20 @@ for k in range(0,len(states)):
     fraction_out.append(writeme_fraction+'\n')
     totals_out.append(writeme_totals+'\n')
 
-j = open("name_of_file_totals.csv","w")
-j.write(schools)
-for u in range(0,len(totals_out)):
-    j.write(totals_out[u])
-j.close()
+# j = open("name_of_file_totals.csv","w")
+# j.write(schools)
+# for u in range(0,len(totals_out)):
+#     j.write(totals_out[u])
+# j.close()
 
-j = open("name_of_file_counter.csv","w")
-j.write(schools)
-for u in range(0,len(totals_out)):
-    j.write(counter_out[u])
-j.close()
+# j = open("name_of_file_counter.csv","w")
+# j.write(schools)
+# for u in range(0,len(totals_out)):
+#     j.write(counter_out[u])
+# j.close()
 
-j = open("name_of_file_fraction.csv","w")
-j.write(schools)
-for u in range(0,len(totals_out)):
-    j.write(fraction_out[u])
-j.close()
+# j = open("name_of_file_fraction.csv","w")
+# j.write(schools)
+# for u in range(0,len(totals_out)):
+#     j.write(fraction_out[u])
+# j.close()
